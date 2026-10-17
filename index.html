@@ -110,27 +110,6 @@ footer .bar { width: min(900px, 92%); margin: 0 auto; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
 
-/* Light orange + black theme (overrides) */
-:root { --bg: #fff1e0; --panel: #0f0f10; --line: #2c2c2e; --ink: #f4f1ec; --muted: #a3a3a8; --page-ink: #141414; --page-muted: #4b3b2a; --accent: #ff9f43; }
-body { color: var(--page-ink); background: linear-gradient(180deg, #ffeedd 0%, #ffd8ae 100%) fixed; }
-h1, h2 { color: var(--page-ink); }
-.lead, .intro { color: var(--page-muted); }
-.lead strong { color: var(--page-ink); }
-.panel { color: var(--ink); }
-.site-header { background: #0f0f10; }
-.progress span { background: linear-gradient(90deg, #ff9f43, #ffd08a); }
-.rail { background: #0f0f10; }
-.rail a { background: #262626; color: #ffb25b; }
-.rail a:hover { background: #ff9f43; color: #111; }
-.btn { background: #111; border-color: #111; color: #ffb25b; }
-.btn.ghost { background: transparent; color: #111; }
-.panel .btn { background: #ff9f43; border-color: #ff9f43; color: #111; }
-.panel .btn.ghost { background: transparent; color: #ffb25b; }
-input, pre { background: #1a1a1b; }
-footer { color: var(--page-muted); border-top-color: rgba(0,0,0,.2); }
-:focus-visible { outline-color: #111; }
-.panel :focus-visible { outline-color: #ffb25b; }
-
 </style>
 </head>
 <body>
