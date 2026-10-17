@@ -13,16 +13,11 @@
 <header class="site-header">
   <div class="wrap bar">
     <a class="brand" href="#top">Prompt<span>Craft</span> Lab</a>
-    <nav aria-label="Main">
-      <a href="#guide">Guide</a>
-      <a href="#builder">Builder</a>
-      <a href="#examples">Examples</a>
-      
-    </nav>
+    <nav aria-label="Main"><a href="#framework">Framework</a><a href="#builder">Builder</a></nav>
   </div>
   <div class="progress"><span id="bar"></span></div>
 </header>
-<aside class="rail" aria-label="Sections"><a href="#top">Intro</a><a href="#guide">Guide</a><a href="#builder">Build</a><a href="#examples">Gallery</a></aside>
+<aside class="rail" aria-label="Sections"><a href="#top">Intro</a><a href="#framework">Framework</a><a href="#builder">Build</a></aside>
 
 <main id="main">
 
@@ -30,66 +25,20 @@
 <section class="hero" id="top">
   <div class="wrap">
     <h1>Write prompts that get the answer you wanted.</h1>
-    <p class="lead">A <strong>prompt</strong> is the instruction you give an AI assistant. <strong>Prompt engineering</strong> is the habit of writing those instructions clearly. CO-STAR is a simple six-part checklist that helps you do it every time.</p>
-    <ul class="pills"><li>Context + Objective + Style</li><li>Tone + Audience + Response</li><li>Better control over output</li></ul>
-    <div class="panel">
+    <p class="lead">A <strong>prompt</strong> is the instruction you give an AI assistant. <strong>Prompt engineering</strong> is the practice of writing those instructions precisely, so the results are accurate and usable. CO-STAR is a six-part framework that gives every prompt a clear structure.</p>
+    <ul class="pills"><li>Context, Objective and Style</li><li>Tone, Audience and Response</li><li>Consistent, reliable output</li></ul>
+    <div class="panel" id="framework">
       <p class="mono">The CO-STAR framework</p>
       <ul class="letters" aria-label="The six CO-STAR elements">
-        <li><a href="#context"><b>C</b><strong>Context</strong><span>Background for the task</span></a></li>
-        <li><a href="#objective"><b>O</b><strong>Objective</strong><span>Exactly what you want done</span></a></li>
-        <li><a href="#style"><b>S</b><strong>Style</strong><span>How it should be written</span></a></li>
-        <li><a href="#tone"><b>T</b><strong>Tone</strong><span>Emotional / professional feel</span></a></li>
-        <li><a href="#audience"><b>A</b><strong>Audience</strong><span>Who will read the output</span></a></li>
-        <li><a href="#response"><b>R</b><strong>Response</strong><span>Format, length, structure</span></a></li>
+        <li><div class="t"><b>C</b><strong>Context</strong><span>Background and situation the AI needs</span></div></li>
+        <li><div class="t"><b>O</b><strong>Objective</strong><span>The specific task to be completed</span></div></li>
+        <li><div class="t"><b>S</b><strong>Style</strong><span>Format and writing approach</span></div></li>
+        <li><div class="t"><b>T</b><strong>Tone</strong><span>Attitude and level of formality</span></div></li>
+        <li><div class="t"><b>A</b><strong>Audience</strong><span>Who will read and use the output</span></div></li>
+        <li><div class="t"><b>R</b><strong>Response</strong><span>Length, structure and deliverable format</span></div></li>
       </ul>
     </div>
-    <p><a class="btn" href="#guide">Explore CO-STAR</a> <a class="btn ghost" href="#builder">Build a prompt</a></p>
-  </div>
-</section>
-
-<!-- GUIDE -->
-<section id="guide">
-  <div class="wrap">
-    <h2>The CO-STAR guide</h2>
-    <p class="intro">Each element answers one question. Answer all six and your prompt leaves little room for guesswork.</p>
-    <div class="cards">
-      <article id="context">
-        <h3>Context</h3>
-        <p><strong>What it is:</strong> The background the AI needs to understand your situation.</p>
-        <p><strong>Ask yourself:</strong> What does the AI need to know first?</p>
-        <p class="eg"><strong>Example:</strong> I manage IT for a 40-person office and we are moving email to a new provider next month.</p>
-      </article>
-      <article id="objective">
-        <h3>Objective</h3>
-        <p><strong>What it is:</strong> The specific task you want done.</p>
-        <p><strong>Ask yourself:</strong> What exactly should the AI produce?</p>
-        <p class="eg"><strong>Example:</strong> Write a checklist of the steps to move every mailbox with no lost messages.</p>
-      </article>
-      <article id="style">
-        <h3>Style</h3>
-        <p><strong>What it is:</strong> The writing format or voice, such as a report, a story or a how-to guide.</p>
-        <p><strong>Ask yourself:</strong> What kind of writing do I want?</p>
-        <p class="eg"><strong>Example:</strong> A clear, step-by-step how-to guide.</p>
-      </article>
-      <article id="tone">
-        <h3>Tone</h3>
-        <p><strong>What it is:</strong> The attitude of the writing, such as friendly, formal or reassuring.</p>
-        <p><strong>Ask yourself:</strong> How should it feel to read?</p>
-        <p class="eg"><strong>Example:</strong> Calm and reassuring.</p>
-      </article>
-      <article id="audience">
-        <h3>Audience</h3>
-        <p><strong>What it is:</strong> The people who will read the result.</p>
-        <p><strong>Ask yourself:</strong> Who is this for, and what do they already know?</p>
-        <p class="eg"><strong>Example:</strong> Office staff with no technical background.</p>
-      </article>
-      <article id="response">
-        <h3>Response</h3>
-        <p><strong>What it is:</strong> The shape of the answer: length, layout or file type.</p>
-        <p><strong>Ask yourself:</strong> How should the answer be delivered?</p>
-        <p class="eg"><strong>Example:</strong> A numbered list of no more than 10 steps, each under 20 words.</p>
-      </article>
-    </div>
+    <p><a class="btn" href="#framework">Explore CO-STAR</a> <a class="btn ghost" href="#builder">Build a prompt</a></p>
   </div>
 </section>
 
@@ -118,15 +67,6 @@
         <p id="note" class="note"></p>
       </form>
     </div>
-  </div>
-</section>
-
-<!-- EXAMPLES -->
-<section id="examples">
-  <div class="wrap">
-    <h2>Examples gallery</h2>
-    <p class="intro">Three complete prompts from different fields. Each shows the six inputs and the prompt they produce.</p>
-    <div id="gallery"></div>
   </div>
 </section>
 

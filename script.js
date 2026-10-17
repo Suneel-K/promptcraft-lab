@@ -10,37 +10,6 @@ const PARTS = [
   { key: "response",  title: "RESPONSE",  fallback: "A short, well-structured answer. Ask me if anything is unclear." }
 ];
 
-// Examples gallery. To add one, copy a block, paste it before the last "]", and edit the text.
-const EXAMPLES = [
-  {
-    domain: "IT administration",
-    context: "I manage IT for a 40-person office. We are moving everyone's email to a new provider next month.",
-    objective: "Write a checklist of the steps needed to move every mailbox without losing messages.",
-    style: "A clear, step-by-step how-to guide.",
-    tone: "Calm and reassuring.",
-    audience: "Office staff with no technical background.",
-    response: "A numbered list of no more than 10 steps, each under 20 words."
-  },
-  {
-    domain: "Marketing",
-    context: "I run a small bakery that just launched a gluten-free sourdough loaf. We sell mostly to local families.",
-    objective: "Write three Instagram captions announcing the new loaf.",
-    style: "Short, vivid social media copy.",
-    tone: "Warm, playful and inviting.",
-    audience: "Local parents who care about healthy eating.",
-    response: "Three captions, each under 40 words, with two hashtags each."
-  },
-  {
-    domain: "Education",
-    context: "I teach a Year 8 science class. We have just started a unit on photosynthesis.",
-    objective: "Explain how photosynthesis works and give a short quiz to check understanding.",
-    style: "A friendly classroom explanation using one everyday comparison.",
-    tone: "Encouraging and curious.",
-    audience: "Students aged 12 to 13 who are new to the topic.",
-    response: "A 150-word explanation followed by 4 multiple-choice questions with answers."
-  }
-];
-
 /* ---------- Code (no need to edit below) ---------- */
 
 // Builds the prompt text. Returns the text and a list of parts that used defaults.
@@ -95,18 +64,6 @@ copyBtn.addEventListener("click", async () => {
   }
   status.textContent = "Copied!";
   setTimeout(() => { status.textContent = ""; }, 2000);
-});
-
-// Render the examples gallery
-const gallery = document.getElementById("gallery");
-const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
-EXAMPLES.forEach(ex => {
-  const inputs = PARTS.map(p => "<dt>" + p.title[0] + p.title.slice(1).toLowerCase() + "</dt><dd>" + esc(ex[p.key]) + "</dd>").join("");
-  const div = document.createElement("article");
-  div.className = "ex";
-  div.innerHTML = "<h3>" + esc(ex.domain) + "</h3><div class='grid'><div><h4>Inputs</h4><dl>" + inputs +
-    "</dl></div><div><h4>Generated prompt</h4><pre>" + esc(buildPrompt(ex).text) + "</pre></div></div>";
-  gallery.appendChild(div);
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
